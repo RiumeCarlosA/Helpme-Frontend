@@ -4,7 +4,6 @@
 
 .sidenav {
    width: 13rem;
-   color: white;
    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(37,97,207,1) 0%, rgba(0,212,255,1) 100%);
 }
 
@@ -14,16 +13,20 @@ img {
    margin: .8rem auto 1rem auto;
 }
 
-.sidenav a {
+a {
    color: white;
 }
 
-.sidenav i {
+i {
+   color: white;
    margin-right: .6rem;
+   align-items: center;
+   justify-content: center;
 }
 
 .menu {
    margin: 1rem 0 0 1rem;
+   border-radius: 0.5rem;
    color: white;
    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(37,97,207,1) 0%, rgba(0,212,255,1) 100%);
 }

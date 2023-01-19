@@ -37,7 +37,7 @@ import { ToastrModule } from 'ngx-toastr';
     HomeComponent,
     HeaderComponent,
     TecnicoListComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

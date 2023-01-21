@@ -33,3 +33,7 @@
     margin-top: 2rem;
     opacity: .5;
  }
+
+ mat-icon {
+    opacity: .8;
+ }

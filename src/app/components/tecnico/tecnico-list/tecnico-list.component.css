@@ -16,3 +16,11 @@ button {
     margin-left: 1rem;
     width: 20%
 }
+
+.edit {
+    color: rgb(20, 89, 193);
+}
+
+.delete {
+    color: rgb(210, 20, 20);
+}

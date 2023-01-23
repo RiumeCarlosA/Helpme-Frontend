@@ -1,9 +1,15 @@
 .card {
-    width: 85%;
-    margin: 1rem auto;
-    padding: 1rem 1rem;
-    border-radius: 0.5rem;
-    background-color: rgb(235, 235, 235);
+   width: 85%;
+   margin: 1rem auto;
+   padding: 1rem 1rem;
+   border-radius: 0.5rem;
+   background-color: rgb(235, 235, 235);
+ }
+
+ .card:hover {
+   transform: scale(1.02); 
+   box-shadow: 0 5px 15px rgba(75, 75, 76, 0.6);
+   z-index: 10;
  }
  
  img {

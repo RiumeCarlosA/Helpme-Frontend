@@ -5,35 +5,41 @@
     border-radius: .6rem;
     border-left: 2rem;
  }
- 
- .fullWidth {
-    width: 100%;
- }
- 
- h1, p {
-    text-align: center;
- }
- 
- img {
-    height: 12rem;
-    margin: auto;
- }
- 
- .section {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-evenly;
- }
- 
- button {
-    margin-top: .5rem;
- }
- 
- p {
-    margin-top: 2rem;
-    opacity: .5;
- }
 
- mat-icon {
-    opacity: .8;
- }
+.fullWidth {
+   width: 100%;
+}
+
+h1, p {
+   text-align: center;
+}
+
+img {
+   height: 12rem;
+   margin: auto;
+}
+
+.section {
+   margin-bottom: 1rem;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+button {
+   margin-top: .5rem;
+}
+
+button:hover{
+   transform: scale(1.05); 
+   box-shadow: 0 5px 15px rgba(75, 75, 76, 0.6);
+   z-index: 10;
+} 
+
+p {
+   margin-top: 2rem;
+   opacity: .5;
+}
+
+mat-icon {
+   opacity: .8;   
+}

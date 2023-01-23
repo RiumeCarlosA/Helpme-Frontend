@@ -10,33 +10,31 @@
 }
 
 .itens{
-   flex: auto;
+   display: flex;
    width: 95%;
    background: rgb(255, 255, 255);
    border-radius: 0.6rem;
    margin-right: 0.6rem;
    margin-left: 0.3rem;
    align-items: left;
-   border-color: 0.2rem solid black;
+}
+
+.icon {
+   margin-right: .8rem;
+   transition: all .5s;
+   border: 0.5rem solid transparent;
 }
 
 .itens:hover{
    transform: scale(1.05); 
    box-shadow: 0 5px 15px rgba(0, 21, 255, 0.6);
    z-index: 10;
-   background: rgb(215, 242, 252);
-}
-
-.icon {
-   margin-right: .6rem;
-   transition: all .5s;
-   border: 0.5rem solid transparent;
+   background: rgb(224, 247, 255);
+   border: 0.005rem solid #c6c6c6;
 }
 
 .itens:hover .icon {
-   margin: 0.3rem;
-   border: 0.15rem solid #00a6ff;
-   border-radius: 25%;
+   margin: 0.8rem;
 }
 
 img {
@@ -55,4 +53,10 @@ img {
    border-radius: 0.5rem;
    color: white;
    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(37,97,207,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.menu:hover {
+   transform: scale(1.05); 
+   box-shadow: 0 5px 15px rgba(78, 78, 83, 0.6);
+   z-index: 10;
 }

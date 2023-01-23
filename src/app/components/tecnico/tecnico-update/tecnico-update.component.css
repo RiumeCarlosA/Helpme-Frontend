@@ -28,6 +28,12 @@
  button {
     margin-top: .5rem;
  }
+
+ button:hover{
+   transform: scale(1.05); 
+   box-shadow: 0 5px 15px rgba(75, 75, 76, 0.6);
+   z-index: 10;
+}
  
  p {
     margin-top: 2rem;

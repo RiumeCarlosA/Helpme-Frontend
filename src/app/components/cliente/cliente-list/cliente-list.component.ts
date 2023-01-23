@@ -1,25 +1,25 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { Tecnico } from 'src/app/models/tecnico';
-import { TecnicoService } from 'src/app/services/tecnico.service';
+import { Cliente } from 'src/app/models/cliente';
+import { ClienteService } from 'src/app/services/cliente.service';
 
 @Component({
-  selector: 'app-tecnico-list',
-  templateUrl: './tecnico-list.component.html',
-  styleUrls: ['./tecnico-list.component.css']
+  selector: 'app-cliente-list',
+  templateUrl: './cliente-list.component.html',
+  styleUrls: ['./cliente-list.component.css']
 })
-export class TecnicoListComponent {
+export class ClienteListComponent {
 
-  ELEMENT_DATA: Tecnico[] = []
+  ELEMENT_DATA: Cliente[] = []
 
   displayedColumns: string[] = ['name', 'weight', 'symbol', 'acoes'];
-  dataSource = new MatTableDataSource<Tecnico>(this.ELEMENT_DATA);
+  dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(
-    private service: TecnicoService
+    private service: ClienteService
   ) {}
 
   ngOnInit(): void {
@@ -29,7 +29,7 @@ export class TecnicoListComponent {
   findAll() {
     this.service.findAll().subscribe( resposta => {
       this.ELEMENT_DATA = resposta
-      this.dataSource = new MatTableDataSource<Tecnico>(this.ELEMENT_DATA);
+      this.dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
       this.dataSource.paginator = this.paginator;
     });
   }

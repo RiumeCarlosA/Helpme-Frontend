@@ -1,0 +1,42 @@
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+}
+
+mat-form-field {
+    margin-top: 1rem;
+    width: 30%;
+}
+
+button {
+    margin-left: 1rem;
+    width: 20%;
+}
+
+button:hover{
+    transform: scale(1.05); 
+    box-shadow: 0 5px 15px rgba(75, 75, 76, 0.6);
+    z-index: 10;
+}
+
+.edit {
+    color: rgb(20, 89, 193);
+}
+
+.edit:hover{
+    transform: scale(1.15); 
+    z-index: 10;
+}
+
+.delete {
+    color: rgb(210, 20, 20);
+}
+
+.delete:hover{
+    transform: scale(1.15); 
+    z-index: 10;
+}

@@ -26,13 +26,26 @@
    border: 0.5rem solid transparent;
 }
 
-.itens:hover{
+.itens:hover {
    float: left;
    transform: scale(1.05); 
    box-shadow: 0 5px 15px rgba(0, 21, 255, 0.6);
    z-index: 10;
    background: rgb(215, 242, 252);
    border: 0.005rem solid #c6c6c6;
+}
+
+.selected {
+   float: left;
+   transform: scale(1.05); 
+   box-shadow: 0 5px 15px rgba(0, 21, 255, 0.6);
+   z-index: 10;
+   background: rgb(215, 242, 252);
+   border: 0.005rem solid #c6c6c6;
+}
+
+.selected .icon {
+   margin: 1rem;
 }
 
 .itens:hover .icon {
@@ -46,7 +59,8 @@ img {
 }
 
 .sidenav a {
-   color: white;
+   display: flex;
+   align-items: center;
 }
 
 

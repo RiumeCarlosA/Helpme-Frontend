@@ -39,7 +39,7 @@
    float: left;
    transform: scale(1.05); 
    box-shadow: 0 5px 15px rgba(0, 21, 255, 0.6);
-   z-index: 10;
+   z-index: 15;
    background: rgb(215, 242, 252);
    border: 0.005rem solid #c6c6c6;
 }

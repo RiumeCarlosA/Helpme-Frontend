@@ -18,6 +18,8 @@ export class ChamadoListComponent {
   displayedColumns: string[] = ['id', 'titulo', 'cliente', 'tecnico', 'dataAbertura', 'prioridade', 'status', 'acoes'];
   dataSource = new MatTableDataSource<Chamado>(this.ELEMENT_DATA);
 
+  status: any = null;
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(
@@ -61,16 +63,25 @@ export class ChamadoListComponent {
     }
   }
 
-  orderByStatus(status: any): void{
+  orderByStatus(event: any, status: any): void {
+    let targetButton = event.target.parentNode;
     let list: Chamado[] = []
-    this.ELEMENT_DATA.forEach(element => {
-      if(element.status == status)
-        list.push(element)
-    });
-    this.FILTERED_DATA = list;
-    this.dataSource = new MatTableDataSource<Chamado>(list);
-    this.dataSource.paginator = this.paginator;
-  }
+    if(this.status != status) {
+      this.status = status;
+      this.ELEMENT_DATA.forEach(element => {
+        if(element.status == status)
+          list.push(element)
+      });
+      this.FILTERED_DATA = list;
+      this.dataSource = new MatTableDataSource<Chamado>(list);
+      this.dataSource.paginator = this.paginator;
+    } else {
+      this.status = null;
+      this.findAll();
+      targetButton.classList.remove('mat-radio-checked');
+      targetButton.classList.add('marked-unchecked');
+    }
+  } 
 
 
 }

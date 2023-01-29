@@ -1,0 +1,48 @@
+.container {
+    width: 45%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+h1, img, p {
+    text-align: center;
+}
+
+img {
+    height: 15rem;
+}
+
+.status-prioridade {
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-prioridade mat-form-field {
+    width: 49%;
+}
+
+.observacoes {
+    min-height: 6rem;
+    max-height: 10rem;
+}
+
+button {
+    margin-top: 0.5rem
+}
+
+button:hover{
+    transform: scale(1.05); 
+    box-shadow: 0 5px 15px rgba(75, 75, 76, 0.6);
+    z-index: 10;
+}
+
+p {
+    margin-top: 2rem;
+    opacity: .5;
+}

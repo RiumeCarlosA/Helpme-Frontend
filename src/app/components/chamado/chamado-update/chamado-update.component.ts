@@ -30,12 +30,12 @@ export class ChamadoUpdateComponent implements OnInit {
   clientes: Cliente[] = []
   tecnicos: Tecnico[] = []
 
-  titulo: FormControl = new FormControl(null, [Validators.required])
-  prioridade: FormControl = new FormControl(null, [Validators.required])
-  status: FormControl = new FormControl(null, [Validators.required])
+  titulo: FormControl =      new FormControl(null, [Validators.required])
+  prioridade: FormControl =  new FormControl(null, [Validators.required])
+  status: FormControl =      new FormControl(null, [Validators.required])
   observacoes: FormControl = new FormControl(null, [Validators.required])
-  tecnico: FormControl = new FormControl(null, [Validators.required])
-  cliente: FormControl = new FormControl(null, [Validators.required])
+  tecnico: FormControl =     new FormControl(null, [Validators.required])
+  cliente: FormControl =     new FormControl(null, [Validators.required])
 
   constructor(
     private chamadoService: ChamadoService,
@@ -63,7 +63,7 @@ export class ChamadoUpdateComponent implements OnInit {
 
   update(): void {
     this.chamadoService.update(this.chamado).subscribe(resposta => {
-      this.toastService.success('Chamado criado com sucesso', 'Novo chamado');
+      this.toastService.success('Chamado atualizado com sucesso', 'Novo chamado');
       this.routerService.navigate(['chamados'])
     }, ex => {
       this.toastService.error(ex.error.error);

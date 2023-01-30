@@ -33,7 +33,7 @@ export class ChamadoListComponent {
   findAll(): void {
     this.service.findAll().subscribe(resposta => {
       this.ELEMENT_DATA = resposta;
-      this.dataSource = new MatTableDataSource<Chamado>(resposta);
+      this.dataSource = new MatTableDataSource<Chamado>(this.ELEMENT_DATA);
       this.dataSource.paginator = this.paginator;
     })
   }
@@ -82,6 +82,5 @@ export class ChamadoListComponent {
       targetButton.classList.add('marked-unchecked');
     }
   } 
-
 
 }

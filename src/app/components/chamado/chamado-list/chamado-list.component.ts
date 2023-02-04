@@ -18,7 +18,7 @@ export class ChamadoListComponent {
   displayedColumns: string[] = ['id', 'titulo', 'cliente', 'tecnico', 'dataAbertura', 'prioridade', 'status', 'acoes'];
   dataSource = new MatTableDataSource<Chamado>(this.ELEMENT_DATA);
 
-  status: any = null;
+  prioridade: any = null;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -66,8 +66,8 @@ export class ChamadoListComponent {
   orderByStatus(event: any, status: any): void {
     let targetButton = event.target.parentNode;
     let list: Chamado[] = []
-    if(this.status != status) {
-      this.status = status;
+    if(this.prioridade != status) {
+      this.prioridade = status;
       this.ELEMENT_DATA.forEach(element => {
         if(element.status == status)
           list.push(element)
@@ -76,7 +76,27 @@ export class ChamadoListComponent {
       this.dataSource = new MatTableDataSource<Chamado>(list);
       this.dataSource.paginator = this.paginator;
     } else {
-      this.status = null;
+      this.prioridade = null;
+      this.findAll();
+      targetButton.classList.remove('mat-radio-checked');
+      targetButton.classList.add('marked-unchecked');
+    }
+  } 
+
+  orderByPrioridade(event: any, prioridade: any): void {
+    let targetButton = event.target.parentNode;
+    let list: Chamado[] = []
+    if(this.prioridade != prioridade) {
+      this.prioridade = prioridade;
+      this.ELEMENT_DATA.forEach(element => {
+        if(element.status == prioridade)
+          list.push(element)
+      });
+      this.FILTERED_DATA = list;
+      this.dataSource = new MatTableDataSource<Chamado>(list);
+      this.dataSource.paginator = this.paginator;
+    } else {
+      this.prioridade = null;
       this.findAll();
       targetButton.classList.remove('mat-radio-checked');
       targetButton.classList.add('marked-unchecked');

@@ -12,6 +12,12 @@
         <mat-radio-button (click)="orderByStatus($event, 1)" value="1">Andamento</mat-radio-button>
         <mat-radio-button (click)="orderByStatus($event, 2)" value="2">Encerrado</mat-radio-button>
     </mat-radio-group>
+
+    <mat-radio-group color="primary">
+      <mat-radio-button (click)="orderByPrioridade($event, 0)" value="0">Baixa</mat-radio-button>
+      <mat-radio-button (click)="orderByPrioridade($event, 1)" value="1">Média</mat-radio-button>
+      <mat-radio-button (click)="orderByPrioridade($event, 2)" value="2">Alta</mat-radio-button>
+  </mat-radio-group>
   
     <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource">
